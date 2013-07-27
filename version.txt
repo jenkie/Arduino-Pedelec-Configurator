@@ -1,4 +1,4 @@
-1.5
+1.6
 - Added configuration option for vmax (Battery voltage when fully charged)
 - Added some more tooltips
 - Tooltips show up without delay
