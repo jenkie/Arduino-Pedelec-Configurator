@@ -1,4 +1,3 @@
-1.6
-- Added configuration option for vmax (Battery voltage when fully charged)
-- Added some more tooltips
-- Tooltips show up without delay
+1.7
+- minimum Value of PAS factor can now be 0.01
+- support for pre-guess of throttle output to motor controller (may remove lag for speed-based controllers)
