@@ -1,3 +1,9 @@
-1.7
-- minimum Value of PAS factor can now be 0.01
-- support for pre-guess of throttle output to motor controller (may remove lag for speed-based controllers)
+1.8
+- Added support for two profiles (blue and red)
+- Press button on top to configure other profile
+- Current profile-dependent parameters:
+	Maximum power
+	Speed cutoff min/max
+	Starting aid speed
+	Maximum support setting ("power poti max")
+	Capacity
