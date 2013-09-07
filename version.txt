@@ -1,4 +1,5 @@
-1.8
+1.9
+- Added support for DSPC01 baro/temp module
 - Added support for two profiles (blue and red)
 - Press button on top to configure other profile
 - Current profile-dependent parameters:
