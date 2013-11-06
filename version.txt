@@ -1,10 +1,2 @@
-1.9
-- Added support for DSPC01 baro/temp module
-- Added support for two profiles (blue and red)
-- Press button on top to configure other profile
-- Current profile-dependent parameters:
-	Maximum power
-	Speed cutoff min/max
-	Starting aid speed
-	Maximum support setting ("power poti max")
-	Capacity
+1.10
+- Works without internet if you first copy https://github.com/jenkie/Arduino-Pedelec-Controller/zipball/master to /source/git.zip
