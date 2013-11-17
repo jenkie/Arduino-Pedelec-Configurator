@@ -1,2 +1,2 @@
-1.10
-- Works without internet if you first copy https://github.com/jenkie/Arduino-Pedelec-Controller/zipball/master to /source/git.zip
+1.11
+- Updated to support Hardware Revision 1.5
