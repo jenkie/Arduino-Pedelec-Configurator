@@ -1,2 +1,2 @@
-1.11
-- Updated to support Hardware Revision 1.5
+1.12
+- Support for BMS Battery S-LCD displays
