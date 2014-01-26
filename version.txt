@@ -1,2 +1,2 @@
-1.12
-- Support for BMS Battery S-LCD displays
+1.13
+- Bug fix: poti offset and max were not adjustable
