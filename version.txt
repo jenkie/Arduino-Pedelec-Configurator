@@ -1,2 +1,4 @@
-1.13
-- Bug fix: poti offset and max were not adjustable
+1.14
+- Added checkbox for first aid menu
+- PAS factor increment is now 0.01 instead of 0.1
+- PID values are now located in the motor controller box
