@@ -1,2 +1,5 @@
+1.16
+- Added checkbox for automatic charge detection
+- Added checkbox for appearance of profile switching options in the display menu
 1.15
 - You can now select any local copy of the source code (e. g. with your own modifications outside config.h) to be used, not only the github sources
