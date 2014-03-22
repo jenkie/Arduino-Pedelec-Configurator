@@ -1,4 +1,2 @@
-1.14
-- Added checkbox for first aid menu
-- PAS factor increment is now 0.01 instead of 0.1
-- PID values are now located in the motor controller box
+1.15
+- You can now select any local copy of the source code (e. g. with your own modifications outside config.h) to be used, not only the github sources
