@@ -1,5 +1,2 @@
-1.17
-- Several bugfixes
-- Up-Down switches to set support level implemented (use instead of poti or soft-poti)
-- Additional Switch can be connected instead of poti, if up-down-switches are selected
-- Switch actions updated (light, poti-up, poti-down)
+1.18
+- Configurator now uses one special release of Arduino Pedelec Controller. This is more safe if changes in the Source code are made.
