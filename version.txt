@@ -1,2 +1,5 @@
-1.18
-- Configurator now uses one special release of Arduino Pedelec Controller. This is more safe if changes in the Source code are made.
+1.19
+- Support Lights-Switch actions
+- Set total kilometers via menu
+- Serial port connections rearranged
+- Support 16x2 Serial Display
