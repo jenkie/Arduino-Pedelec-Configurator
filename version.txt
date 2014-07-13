@@ -5,4 +5,5 @@
 - Fixed-power throttle by pressing a button
 - Improved charging detection	
 - Support for FC 2.0
+- Support BMS S-LCD3
 
