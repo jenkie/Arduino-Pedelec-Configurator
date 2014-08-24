@@ -1,9 +1,7 @@
-1.22
-- Support for Dual Speed Motor and automatic gear shifting
-- New Actions: ACTION_FIXED_THROTTLE_VALUE, ACTION_DISPLAY_PREV_VIEW, ACTION_DISPLAY_NEXT_VIEW, ACTION_GEAR_SHIFT_LOW, ACTION_GEAR_SHIFT_HIGH, ACTION_GEAR_SHIFT_AUTO, ACTION_GEAR_SHIFT_TOGGLE_LOW_HIGH, ACTION_GEAR_SHIFT_TOGGLE_LOW_HIGH_AUTO
-- Startup poti value can be set
-- Fixed-power throttle by pressing a button
-- Improved charging detection	
-- Support for FC 2.0
-- Support BMS S-LCD3
+1.23
+- Fix Serial LCD for FC 2.0
+- Support Bluetooth for FC 2.0
+- Start supporting IOS app
+- Improve torque readout
+
 
