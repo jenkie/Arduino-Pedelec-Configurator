@@ -1,7 +1,5 @@
-1.23
-- Fix Serial LCD for FC 2.0
-- Support Bluetooth for FC 2.0
-- Start supporting IOS app
-- Improve torque readout
-
+1.24
+- Bidirectional Bluetooth communication for FC 2.0
+- Battery charge cycle counter implemented
+- 16x2 display shows active profile
 
