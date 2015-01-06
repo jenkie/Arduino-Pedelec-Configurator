@@ -1,5 +1,3 @@
-1.24
-- Bidirectional Bluetooth communication for FC 2.0
-- Battery charge cycle counter implemented
-- 16x2 display shows active profile
+1.25
+- Support RC motor controllers
 
