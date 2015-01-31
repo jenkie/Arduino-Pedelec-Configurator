@@ -1,3 +1,4 @@
-1.25
-- Support RC motor controllers
+1.26
+- Support throttle auto cruise (automatically set poti value by holding throttle in place)
+- Bug fixes
 
