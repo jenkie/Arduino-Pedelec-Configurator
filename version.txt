@@ -1,4 +1,5 @@
-1.26
+1.27
 - Support throttle auto cruise (automatically set poti value by holding throttle in place)
+- Set number of wheel magnets to improve speed determination at lower speeds
+- Improved speed calculation with only one wheel magnet
 - Bug fixes
-
