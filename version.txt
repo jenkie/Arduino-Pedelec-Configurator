@@ -1,5 +1,5 @@
-1.27
-- Support throttle auto cruise (automatically set poti value by holding throttle in place)
-- Set number of wheel magnets to improve speed determination at lower speeds
-- Improved speed calculation with only one wheel magnet
-- Bug fixes
+1.28
+- Added detection of broken speed sensor
+- PAS timeout configurable
+- Add support for DS1820 temperature sensors 
+- Show DS1820 sensors on 16x2 Displays
