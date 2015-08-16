@@ -1,5 +1,5 @@
-1.28
-- Added detection of broken speed sensor
-- PAS timeout configurable
-- Add support for DS1820 temperature sensors 
-- Show DS1820 sensors on 16x2 Displays
+1.29
+- Add support for external current and voltage sensors
+- Fix EEPROM saving of variables for Hardware Revisions 1.0 and 1.1
+- Bugfix in speed calculation and display 
+- Increase PWM frequency for FC 2.x boards to make motor output more smooth
