@@ -1,8 +1,4 @@
-1.30
-- Introducing support for KM5s and rewrote J-LCD code
-- Featuring an common API for King-Meter displays
-- Added display_debug() and SERIAL_MODE_DISPLAYDEBUG/BLUETOOTH_MODE_DISPLAYDEBUG
-- disable motor output at startup - there was a 100ms spike during setup routine at motor output
-- slowly ramp PID integral part down to 0 when not pedaling instead of setting power setpoint to -60W. This could lead to malfunctions, e.g. if the current offset is configured wrong.
-- added option to reset integral part instead of ramping down
-
+1.31
+- Added switchable display views to Nokia display
+- ACTION_DISPLAY_PREV_VIEW and ACTION_DISPLAY_NEXT_VIEW are active for the Nokia now
+- Enable/Disable certain Views by right-clicking on the Display in the configurator and check/uncheck items
