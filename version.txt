@@ -1,4 +1,6 @@
-1.31
-- Added switchable display views to Nokia display
-- ACTION_DISPLAY_PREV_VIEW and ACTION_DISPLAY_NEXT_VIEW are active for the Nokia now
-- Enable/Disable certain Views by right-clicking on the Display in the configurator and check/uncheck items
+1.32
+- Add support for BBS central motor PAS sensor
+- Configurable gear change pause after pedaling backwards
+- Save human watthours in EEPROM
+
+
