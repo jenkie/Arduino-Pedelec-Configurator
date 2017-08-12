@@ -1,2 +1,6 @@
-1.35
-- Support 10k thermistors
+1.36
+- Add support for FC 2.2
+- Bugfix: Charge counter could not be set
+- Thun X-Cell RT: Make torque measurement offset configurable
+- New Action ACTION_TORQUE_ZERO to auto-zero torque measurement at runtime
+
