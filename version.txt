@@ -1,5 +1,5 @@
-1.37
-- Add support for Sempu torque bottom bracket
-- Bugfix: XCell RT + Lightswitch was not possible on FC 2.x
+1.38
+- Add support for new Version of Sempu torque bottom bracket
+
 
 

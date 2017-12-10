@@ -21,7 +21,7 @@ namespace Arduino_Pedelec_Configurator
         string serialString;
         string appPath;
         string configPath,sourcePath_local,sourcePath_online;
-        string appVersion = "1.37";
+        string appVersion = "1.38";
         string updatetext = "";
         Rectangle rect_motor;
 
@@ -145,7 +145,8 @@ namespace Arduino_Pedelec_Configurator
                         nud_pasfactor_max.Value = 1.5M;
                     }
                     break;
-                case 4: //Sempu
+                case 4: //Sempu V1
+                case 5: //Sempu new
                     if (nud_version.Value <= 5)
                         chb_lightswitch.Checked = false;
                     nud_pastimeout.Visible =
@@ -159,6 +160,7 @@ namespace Arduino_Pedelec_Configurator
                     lbl_torque_zero.Visible =
                     nud_torque_zero.Visible =
                     chb_torquezero_auto.Visible = true;
+                    nud_torque_zero.Value = 307;
                     break;
             }
         }
@@ -983,6 +985,11 @@ namespace Arduino_Pedelec_Configurator
             if (cb_bottombracket.SelectedIndex == 3)
                 tempstring += "#define SUPPORT_BBS\n";
             if (cb_bottombracket.SelectedIndex == 4)
+            {
+                tempstring += "#define SUPPORT_SEMPU_V1\n";
+                tempstring += "const char msg_torquezero[] PROGMEM = \"Re-zero torque sensor\";\n";
+            }
+            if (cb_bottombracket.SelectedIndex == 5)
             {
                 tempstring += "#define SUPPORT_SEMPU\n";
                 tempstring += "const char msg_torquezero[] PROGMEM = \"Re-zero torque sensor\";\n";

@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_menu));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cb_bottombracket = new System.Windows.Forms.ComboBox();
             this.nud_circumference = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -444,7 +444,8 @@
             "Standard PAS",
             "Thun X-Cell RT",
             "BBS01/02",
-            "Sempu"});
+            "Sempu V1",
+            "Sempu new"});
             this.cb_bottombracket.Location = new System.Drawing.Point(26, 16);
             this.cb_bottombracket.Name = "cb_bottombracket";
             this.cb_bottombracket.Size = new System.Drawing.Size(121, 21);
@@ -2822,27 +2823,27 @@
             // powergraph
             // 
             this.powergraph.BackColor = System.Drawing.SystemColors.Control;
-            chartArea3.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea3.AxisX.Title = "speed / km/h";
-            chartArea3.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea3.AxisY.Title = "power / W";
-            chartArea3.Name = "ChartArea1";
-            this.powergraph.ChartAreas.Add(chartArea3);
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisX.Title = "speed / km/h";
+            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisY.Title = "power / W";
+            chartArea1.Name = "ChartArea1";
+            this.powergraph.ChartAreas.Add(chartArea1);
             this.powergraph.Location = new System.Drawing.Point(-1, 190);
             this.powergraph.Name = "powergraph";
-            series4.BorderWidth = 2;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Color = System.Drawing.Color.Blue;
-            series4.IsVisibleInLegend = false;
-            series4.Name = "Series1";
-            series5.BorderWidth = 2;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Color = System.Drawing.Color.Red;
-            series5.Name = "Series2";
-            this.powergraph.Series.Add(series4);
-            this.powergraph.Series.Add(series5);
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Blue;
+            series1.IsVisibleInLegend = false;
+            series1.Name = "Series1";
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Red;
+            series2.Name = "Series2";
+            this.powergraph.Series.Add(series1);
+            this.powergraph.Series.Add(series2);
             this.powergraph.Size = new System.Drawing.Size(336, 184);
             this.powergraph.TabIndex = 21;
             this.powergraph.Text = "chart1";
@@ -3510,21 +3511,21 @@
             // chart_pas
             // 
             this.chart_pas.BackColor = System.Drawing.SystemColors.Control;
-            chartArea4.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea4.AxisX.LabelStyle.Enabled = false;
-            chartArea4.AxisX.MajorGrid.Enabled = false;
-            chartArea4.AxisX.MajorTickMark.Enabled = false;
-            chartArea4.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea4.Name = "ChartArea1";
-            this.chart_pas.ChartAreas.Add(chartArea4);
+            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea2.AxisX.LabelStyle.Enabled = false;
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisX.MajorTickMark.Enabled = false;
+            chartArea2.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea2.Name = "ChartArea1";
+            this.chart_pas.ChartAreas.Add(chartArea2);
             this.chart_pas.Location = new System.Drawing.Point(1004, 230);
             this.chart_pas.Name = "chart_pas";
-            series6.BorderWidth = 2;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.IsVisibleInLegend = false;
-            series6.Name = "Series1";
-            this.chart_pas.Series.Add(series6);
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.IsVisibleInLegend = false;
+            series3.Name = "Series1";
+            this.chart_pas.Series.Add(series3);
             this.chart_pas.Size = new System.Drawing.Size(190, 98);
             this.chart_pas.TabIndex = 75;
             this.chart_pas.Text = "chart1";
