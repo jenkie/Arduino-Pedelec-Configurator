@@ -21,7 +21,7 @@ namespace Arduino_Pedelec_Configurator
         string serialString;
         string appPath;
         string configPath,sourcePath_local,sourcePath_online;
-        string appVersion = "1.38";
+        string appVersion = "1.39";
         string updatetext = "";
         Rectangle rect_motor;
 
@@ -275,7 +275,7 @@ namespace Arduino_Pedelec_Configurator
             tb_console.AppendText("\r\nchecking for version");
             try
             {
-                webClient.DownloadFile("https://github.com/jenkie/Arduino-Pedelec-Configurator/raw/master/version.txt", appPath + @"\version.txt");
+                webClient.DownloadFile("https://raw.githubusercontent.com/jenkie/Arduino-Pedelec-Configurator/master/version.txt", appPath + @"\version.txt");
                 webClient.Dispose();
                 if (System.IO.File.Exists(appPath + @"\version.txt"))
                 {
@@ -301,7 +301,7 @@ namespace Arduino_Pedelec_Configurator
             tb_console.AppendText("\r\ndowloading new APC from github");
             try
             {
-                webClient.DownloadFile("https://github.com/jenkie/Arduino-Pedelec-Configurator/zipball/master", appPath + @"\updated_apc.zip");
+                webClient.DownloadFile("https://codeload.github.com/jenkie/Arduino-Pedelec-Configurator/legacy.zip/master", appPath + @"\updated_apc.zip");
                 webClient.Dispose();
                 MessageBox.Show("I will quit now. Extract everything from updated_apc.zip to the application directory and restart this Software.");
                 System.Diagnostics.Process.Start(appPath + @"\updated_apc.zip");
@@ -690,7 +690,7 @@ namespace Arduino_Pedelec_Configurator
                 System.IO.Directory.CreateDirectory(sourcePath_online);
                 tb_console.AppendText("...done\r\ndownloading sources");
                 try{
-                    webClient.DownloadFile("https://github.com/jenkie/Arduino-Pedelec-Controller/zipball/apc"+ appVersion, sourcePath_online + @"\git_down.zip");
+                    webClient.DownloadFile("https://codeload.github.com/jenkie/Arduino-Pedelec-Controller/legacy.zip/apc" + appVersion, sourcePath_online + @"\git_down.zip");
                 }
                 catch (Exception ex)
                 {
