@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_menu));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cb_bottombracket = new System.Windows.Forms.ComboBox();
             this.nud_circumference = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -336,6 +336,11 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
+            this.chb_thermistor_cutoff = new System.Windows.Forms.CheckBox();
+            this.nud_temperature_cutoff_stop = new System.Windows.Forms.NumericUpDown();
+            this.nud_temperature_cutoff_start = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nud_circumference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_magnets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_pasfactor_min)).BeginInit();
@@ -434,6 +439,8 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_temperature_cutoff_stop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_temperature_cutoff_start)).BeginInit();
             this.SuspendLayout();
             // 
             // cb_bottombracket
@@ -2823,27 +2830,27 @@
             // powergraph
             // 
             this.powergraph.BackColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisX.Title = "speed / km/h";
-            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisY.Title = "power / W";
-            chartArea1.Name = "ChartArea1";
-            this.powergraph.ChartAreas.Add(chartArea1);
+            chartArea3.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea3.AxisX.Title = "speed / km/h";
+            chartArea3.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea3.AxisY.Title = "power / W";
+            chartArea3.Name = "ChartArea1";
+            this.powergraph.ChartAreas.Add(chartArea3);
             this.powergraph.Location = new System.Drawing.Point(-1, 190);
             this.powergraph.Name = "powergraph";
-            series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Blue;
-            series1.IsVisibleInLegend = false;
-            series1.Name = "Series1";
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Color = System.Drawing.Color.Red;
-            series2.Name = "Series2";
-            this.powergraph.Series.Add(series1);
-            this.powergraph.Series.Add(series2);
+            series4.BorderWidth = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Blue;
+            series4.IsVisibleInLegend = false;
+            series4.Name = "Series1";
+            series5.BorderWidth = 2;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Color = System.Drawing.Color.Red;
+            series5.Name = "Series2";
+            this.powergraph.Series.Add(series4);
+            this.powergraph.Series.Add(series5);
             this.powergraph.Size = new System.Drawing.Size(336, 184);
             this.powergraph.TabIndex = 21;
             this.powergraph.Text = "chart1";
@@ -3511,21 +3518,21 @@
             // chart_pas
             // 
             this.chart_pas.BackColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.AxisX.LabelStyle.Enabled = false;
-            chartArea2.AxisX.MajorGrid.Enabled = false;
-            chartArea2.AxisX.MajorTickMark.Enabled = false;
-            chartArea2.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.Name = "ChartArea1";
-            this.chart_pas.ChartAreas.Add(chartArea2);
+            chartArea4.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea4.AxisX.LabelStyle.Enabled = false;
+            chartArea4.AxisX.MajorGrid.Enabled = false;
+            chartArea4.AxisX.MajorTickMark.Enabled = false;
+            chartArea4.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea4.Name = "ChartArea1";
+            this.chart_pas.ChartAreas.Add(chartArea4);
             this.chart_pas.Location = new System.Drawing.Point(1004, 230);
             this.chart_pas.Name = "chart_pas";
-            series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.IsVisibleInLegend = false;
-            series3.Name = "Series1";
-            this.chart_pas.Series.Add(series3);
+            series6.BorderWidth = 2;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.IsVisibleInLegend = false;
+            series6.Name = "Series1";
+            this.chart_pas.Series.Add(series6);
             this.chart_pas.Size = new System.Drawing.Size(190, 98);
             this.chart_pas.TabIndex = 75;
             this.chart_pas.Text = "chart1";
@@ -3747,6 +3754,11 @@
             // 
             this.panel11.AutoScroll = true;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Controls.Add(this.label26);
+            this.panel11.Controls.Add(this.label7);
+            this.panel11.Controls.Add(this.nud_temperature_cutoff_stop);
+            this.panel11.Controls.Add(this.chb_thermistor_cutoff);
+            this.panel11.Controls.Add(this.nud_temperature_cutoff_start);
             this.panel11.Controls.Add(this.label6);
             this.panel11.Controls.Add(this.label5);
             this.panel11.Controls.Add(this.nud_therm_r);
@@ -4295,6 +4307,74 @@
             this.panel25.Size = new System.Drawing.Size(80, 54);
             this.panel25.TabIndex = 105;
             // 
+            // chb_thermistor_cutoff
+            // 
+            this.chb_thermistor_cutoff.AutoSize = true;
+            this.chb_thermistor_cutoff.Location = new System.Drawing.Point(6, 202);
+            this.chb_thermistor_cutoff.Name = "chb_thermistor_cutoff";
+            this.chb_thermistor_cutoff.Size = new System.Drawing.Size(162, 17);
+            this.chb_thermistor_cutoff.TabIndex = 115;
+            this.chb_thermistor_cutoff.Text = "Motor temperature protection";
+            this.toolTip1.SetToolTip(this.chb_thermistor_cutoff, "Check if you want to temperature-protect the motor using a temperature power-cuto" +
+        "ff");
+            this.chb_thermistor_cutoff.UseVisualStyleBackColor = true;
+            this.chb_thermistor_cutoff.CheckedChanged += new System.EventHandler(this.chb_thermistor_cutoff_CheckedChanged);
+            // 
+            // nud_temperature_cutoff_stop
+            // 
+            this.nud_temperature_cutoff_stop.Location = new System.Drawing.Point(99, 220);
+            this.nud_temperature_cutoff_stop.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.nud_temperature_cutoff_stop.Name = "nud_temperature_cutoff_stop";
+            this.nud_temperature_cutoff_stop.Size = new System.Drawing.Size(46, 20);
+            this.nud_temperature_cutoff_stop.TabIndex = 117;
+            this.toolTip1.SetToolTip(this.nud_temperature_cutoff_stop, "Temperature cutoff stop in °C. Above this temperature no power is available");
+            this.nud_temperature_cutoff_stop.Value = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            // 
+            // nud_temperature_cutoff_start
+            // 
+            this.nud_temperature_cutoff_start.Location = new System.Drawing.Point(35, 220);
+            this.nud_temperature_cutoff_start.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.nud_temperature_cutoff_start.Name = "nud_temperature_cutoff_start";
+            this.nud_temperature_cutoff_start.Size = new System.Drawing.Size(46, 20);
+            this.nud_temperature_cutoff_start.TabIndex = 116;
+            this.toolTip1.SetToolTip(this.nud_temperature_cutoff_start, "Temperature cutoff start in °C. Up to this temperature the full power is availabl" +
+        "e");
+            this.nud_temperature_cutoff_start.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(149, 222);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(18, 13);
+            this.label7.TabIndex = 118;
+            this.label7.Text = "°C";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(85, 222);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(10, 13);
+            this.label26.TabIndex = 119;
+            this.label26.Text = "-";
+            // 
             // Form_menu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4503,6 +4583,8 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nud_temperature_cutoff_stop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_temperature_cutoff_start)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4811,6 +4893,11 @@
         private System.Windows.Forms.CheckBox chb_torquezero_auto;
         private System.Windows.Forms.Label lbl_torque_zero;
         private System.Windows.Forms.NumericUpDown nud_torque_zero;
+        private System.Windows.Forms.NumericUpDown nud_temperature_cutoff_stop;
+        private System.Windows.Forms.CheckBox chb_thermistor_cutoff;
+        private System.Windows.Forms.NumericUpDown nud_temperature_cutoff_start;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label7;
     }
 }
 

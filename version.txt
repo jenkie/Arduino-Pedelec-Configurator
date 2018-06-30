@@ -1,5 +1,5 @@
-1.39
-- Update for new github urls for downloading zip files
+1.40
+- Added temperature cutoff using thermistor temperature
 
 
 

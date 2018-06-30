@@ -21,7 +21,7 @@ namespace Arduino_Pedelec_Configurator
         string serialString;
         string appPath;
         string configPath,sourcePath_local,sourcePath_online;
-        string appVersion = "1.39";
+        string appVersion = "1.40";
         string updatetext = "";
         Rectangle rect_motor;
 
@@ -1057,7 +1057,13 @@ namespace Arduino_Pedelec_Configurator
             tempstring += "const float thermistor_b=" + (1 / nud_therm_beta.Value).ToString() + ";\n";
             tempstring += "const float thermistor_r=" + nud_therm_r.Value.ToString() + ";\n";
 
-            tempstring+="const int pas_tolerance="+nud_pas_tolerance.Value.ToString()+";\n";
+            if (chb_thermistor_cutoff.Checked)
+                tempstring += "#define SUPPORT_THERMISTOR_CUTOFF\n";
+            tempstring += "const int temperature_cutoff_start=" + nud_temperature_cutoff_start.Value.ToString() + ";\n";
+            tempstring += "const int temperature_cutoff_stop=" + nud_temperature_cutoff_stop.Value.ToString() + ";\n";
+
+
+            tempstring += "const int pas_tolerance="+nud_pas_tolerance.Value.ToString()+";\n";
             tempstring+="const int throttle_offset=" + nud_throttle_min.Value.ToString() +";\n";
             tempstring+="const int throttle_max=" + nud_throttle_max.Value.ToString() +";\n";
 
@@ -1773,6 +1779,15 @@ namespace Arduino_Pedelec_Configurator
         private void chb_torquezero_auto_CheckedChanged(object sender, EventArgs e)
         {
             nud_torque_zero.Enabled = !chb_torquezero_auto.Checked;
+        }
+
+        private void chb_thermistor_cutoff_CheckedChanged(object sender, EventArgs e)
+        {
+            if(!chb_thermistor.Checked)
+            {
+                chb_thermistor_cutoff.Checked = false;
+                MessageBox.Show("Only possible if Thermistor is checked");
+            }
         }
 
         private void lbl_torque_zero_Click(object sender, EventArgs e)
