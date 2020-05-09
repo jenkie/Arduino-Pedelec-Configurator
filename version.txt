@@ -1,5 +1,6 @@
-1.40
-- Added temperature cutoff using thermistor temperature
+1.41
+- Increased .net version to 4.5
+- Fixed github access (needs TLS 1.2)
 
 
 

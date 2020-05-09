@@ -21,7 +21,7 @@ namespace Arduino_Pedelec_Configurator
         string serialString;
         string appPath;
         string configPath,sourcePath_local,sourcePath_online;
-        string appVersion = "1.40";
+        string appVersion = "1.41";
         string updatetext = "";
         Rectangle rect_motor;
 
@@ -301,6 +301,7 @@ namespace Arduino_Pedelec_Configurator
             tb_console.AppendText("\r\ndowloading new APC from github");
             try
             {
+                System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
                 webClient.DownloadFile("https://codeload.github.com/jenkie/Arduino-Pedelec-Configurator/legacy.zip/master", appPath + @"\updated_apc.zip");
                 webClient.Dispose();
                 MessageBox.Show("I will quit now. Extract everything from updated_apc.zip to the application directory and restart this Software.");
@@ -683,16 +684,13 @@ namespace Arduino_Pedelec_Configurator
                 {
                     System.IO.Directory.Delete(directory,true);
                 }
-                //foreach (string file in System.IO.Directory.EnumerateFiles(sourcePath))
-                //{
-                //    System.IO.File.Delete(file);
-                //}     
                 System.IO.Directory.CreateDirectory(sourcePath_online);
                 tb_console.AppendText("...done\r\ndownloading sources");
                 try{
+                    System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
                     webClient.DownloadFile("https://codeload.github.com/jenkie/Arduino-Pedelec-Controller/legacy.zip/apc" + appVersion, sourcePath_online + @"\git_down.zip");
-                }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
                 {
                     tb_console.AppendText("\r\n" + ex.Message);
                     tb_console.AppendText("\r\nusing old sources");
