@@ -557,11 +557,6 @@
             0,
             131072});
             this.nud_pasfactor_min.Location = new System.Drawing.Point(26, 76);
-            this.nud_pasfactor_min.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             this.nud_pasfactor_min.Minimum = new decimal(new int[] {
             1,
             0,
@@ -589,11 +584,6 @@
             0,
             131072});
             this.nud_pasfactor_max.Location = new System.Drawing.Point(98, 76);
-            this.nud_pasfactor_max.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             this.nud_pasfactor_max.Minimum = new decimal(new int[] {
             1,
             0,

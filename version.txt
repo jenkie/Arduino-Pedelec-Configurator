@@ -1,6 +1,8 @@
 1.41
 - Increased .net version to 4.5
 - Fixed github access (needs TLS 1.2)
+- Increase PAS factor limits to 100
+
 
 
 
