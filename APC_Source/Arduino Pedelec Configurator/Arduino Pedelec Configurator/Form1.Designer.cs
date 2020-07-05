@@ -1046,7 +1046,8 @@
             "Kingmeter 618U (KM5s, EBS-LCD2, J-LCD, WS-LCD)",
             "Kingmeter 901U (KM5s)",
             "Bafang C961",
-            "Bafang C965"});
+            "Bafang C965",
+            "Bafang SW102"});
             this.cb_display.Location = new System.Drawing.Point(3, 16);
             this.cb_display.Name = "cb_display";
             this.cb_display.Size = new System.Drawing.Size(105, 21);

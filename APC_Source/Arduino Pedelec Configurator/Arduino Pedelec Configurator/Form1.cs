@@ -21,7 +21,7 @@ namespace Arduino_Pedelec_Configurator
         string serialString;
         string appPath;
         string configPath,sourcePath_local,sourcePath_online;
-        string appVersion = "1.41";
+        string appVersion = "1.42";
         string updatetext = "";
         Rectangle rect_motor;
 
@@ -773,7 +773,7 @@ namespace Arduino_Pedelec_Configurator
             tempstring+="#define HARDWARE_REV " + nud_version.Value.ToString()+"\n";
             tempstring+="#ifndef CONFIG_H\n#define CONFIG_H\n#if ARDUINO < 100\n#include <WProgram.h>\n#else\n#include <Arduino.h>\n#endif\n";
             tempstring +="#include \"switches_action.h\"\n";
-            tempstring +="#define DISPLAY_TYPE_NONE (1<<0)\n#define DISPLAY_TYPE_NOKIA_5PIN (1<<1)\n#define DISPLAY_TYPE_NOKIA_4PIN (1<<2)\n#define DISPLAY_TYPE_NOKIA (DISPLAY_TYPE_NOKIA_5PIN|DISPLAY_TYPE_NOKIA_4PIN)\n#define DISPLAY_TYPE_16X2_LCD_4BIT (1<<3)\n#define DISPLAY_TYPE_16X2_SERIAL (1<<6)\n#define DISPLAY_TYPE_16X2 (DISPLAY_TYPE_16X2_LCD_4BIT|DISPLAY_TYPE_16X2_SERIAL)\n#define DISPLAY_TYPE_BMS (1<<5)\n#define DISPLAY_TYPE_BMS3 (1<<7)\n#define DISPLAY_TYPE_KINGMETER_618U (1<<4)\n#define DISPLAY_TYPE_KINGMETER_901U (1<<8)\n#define DISPLAY_TYPE_KINGMETER (DISPLAY_TYPE_KINGMETER_618U|DISPLAY_TYPE_KINGMETER_901U)\n#define DISPLAY_TYPE_BAFANG_C961 (1<<9)\n#define DISPLAY_TYPE_BAFANG_C965 (1<<10)\n#define DISPLAY_TYPE_BAFANG (DISPLAY_TYPE_BAFANG_C961|DISPLAY_TYPE_BAFANG_C965)\n";
+            tempstring += "#define DISPLAY_TYPE_NONE (1<<0)\n#define DISPLAY_TYPE_NOKIA_5PIN (1<<1)\n#define DISPLAY_TYPE_NOKIA_4PIN (1<<2)\n#define DISPLAY_TYPE_NOKIA (DISPLAY_TYPE_NOKIA_5PIN|DISPLAY_TYPE_NOKIA_4PIN)\n#define DISPLAY_TYPE_16X2_LCD_4BIT (1<<3)\n#define DISPLAY_TYPE_16X2_SERIAL (1<<6)\n#define DISPLAY_TYPE_16X2 (DISPLAY_TYPE_16X2_LCD_4BIT|DISPLAY_TYPE_16X2_SERIAL)\n#define DISPLAY_TYPE_BMS (1<<5)\n#define DISPLAY_TYPE_BMS3 (1<<7)\n#define DISPLAY_TYPE_KINGMETER_618U (1<<4)\n#define DISPLAY_TYPE_KINGMETER_901U (1<<8)\n#define DISPLAY_TYPE_KINGMETER (DISPLAY_TYPE_KINGMETER_618U|DISPLAY_TYPE_KINGMETER_901U)\n#define DISPLAY_TYPE_BAFANG_C961 (1<<9)\n#define DISPLAY_TYPE_BAFANG_C965 (1<<10)\n#define DISPLAY_TYPE_BAFANG_SW102 (1<<11)\n#define DISPLAY_TYPE_BAFANG (DISPLAY_TYPE_BAFANG_C961|DISPLAY_TYPE_BAFANG_C965|DISPLAY_TYPE_BAFANG_SW102)\n";
             switch (cb_display.SelectedIndex)
             {
                 case 0:
@@ -808,6 +808,9 @@ namespace Arduino_Pedelec_Configurator
                     break;
                 case 10:
                     tempstring += "#define DISPLAY_TYPE DISPLAY_TYPE_BAFANG_C965\n";
+                    break;
+                case 11:
+                    tempstring += "#define DISPLAY_TYPE DISPLAY_TYPE_BAFANG_SW102\n";
                     break;
             }
             if (nud_version.Value < 20)
