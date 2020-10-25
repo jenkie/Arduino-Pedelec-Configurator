@@ -1,6 +1,6 @@
-1.42
-- Added Bafang SW102 Display
-- Added averaging for displayed power on Nokia display
+1.43
+- Added Support for Erider T9 bottom bracked
+
 
 
 

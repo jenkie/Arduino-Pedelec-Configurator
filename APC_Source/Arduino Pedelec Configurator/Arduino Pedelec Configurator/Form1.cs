@@ -21,7 +21,7 @@ namespace Arduino_Pedelec_Configurator
         string serialString;
         string appPath;
         string configPath,sourcePath_local,sourcePath_online;
-        string appVersion = "1.42";
+        string appVersion = "1.43";
         string updatetext = "";
         Rectangle rect_motor;
 
@@ -147,6 +147,7 @@ namespace Arduino_Pedelec_Configurator
                     break;
                 case 4: //Sempu V1
                 case 5: //Sempu new
+                case 6: //Erider T9
                     if (nud_version.Value <= 5)
                         chb_lightswitch.Checked = false;
                     nud_pastimeout.Visible =
@@ -162,6 +163,7 @@ namespace Arduino_Pedelec_Configurator
                     chb_torquezero_auto.Visible = true;
                     nud_torque_zero.Value = 307;
                     break;
+
             }
         }
 
@@ -993,6 +995,11 @@ namespace Arduino_Pedelec_Configurator
             if (cb_bottombracket.SelectedIndex == 5)
             {
                 tempstring += "#define SUPPORT_SEMPU\n";
+                tempstring += "const char msg_torquezero[] PROGMEM = \"Re-zero torque sensor\";\n";
+            }
+            if (cb_bottombracket.SelectedIndex == 6)
+            {
+                tempstring += "#define SUPPORT_T9\n";
                 tempstring += "const char msg_torquezero[] PROGMEM = \"Re-zero torque sensor\";\n";
             }
             if (chb_torque_throttle.Checked)

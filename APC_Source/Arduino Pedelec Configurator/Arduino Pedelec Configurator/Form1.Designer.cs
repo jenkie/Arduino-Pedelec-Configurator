@@ -452,7 +452,8 @@
             "Thun X-Cell RT",
             "BBS01/02",
             "Sempu V1",
-            "Sempu new"});
+            "Sempu new",
+            "Erider T9 4pin"});
             this.cb_bottombracket.Location = new System.Drawing.Point(26, 16);
             this.cb_bottombracket.Name = "cb_bottombracket";
             this.cb_bottombracket.Size = new System.Drawing.Size(121, 21);
