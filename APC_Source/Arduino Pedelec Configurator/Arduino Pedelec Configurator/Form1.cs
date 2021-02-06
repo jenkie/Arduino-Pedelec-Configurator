@@ -178,6 +178,8 @@ namespace Arduino_Pedelec_Configurator
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12; //disable TLS 1.0
+
             cbts_disp1short.ComboBox.BindingContext = this.BindingContext;
             cbts_disp1short.ComboBox.DataSource = new BindingSource(ACTIONS, null);
             cbts_disp1long.ComboBox.BindingContext = this.BindingContext;
@@ -273,10 +275,10 @@ namespace Arduino_Pedelec_Configurator
             string line = "";
             updatetext = "";
             WebClient webClient = new WebClient();
-
             tb_console.AppendText("\r\nchecking for version");
             try
             {
+                webClient.Headers.Add("user-agent", "foo");
                 webClient.DownloadFile("https://raw.githubusercontent.com/jenkie/Arduino-Pedelec-Configurator/master/version.txt", appPath + @"\version.txt");
                 webClient.Dispose();
                 if (System.IO.File.Exists(appPath + @"\version.txt"))
@@ -303,8 +305,8 @@ namespace Arduino_Pedelec_Configurator
             tb_console.AppendText("\r\ndowloading new APC from github");
             try
             {
-                System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                webClient.DownloadFile("https://codeload.github.com/jenkie/Arduino-Pedelec-Configurator/legacy.zip/master", appPath + @"\updated_apc.zip");
+                webClient.Headers.Add("user-agent", "foo");
+                webClient.DownloadFile("https://api.github.com/repos/jenkie/Arduino-Pedelec-Configurator/zipball/master", appPath + @"\updated_apc.zip");
                 webClient.Dispose();
                 MessageBox.Show("I will quit now. Extract everything from updated_apc.zip to the application directory and restart this Software.");
                 System.Diagnostics.Process.Start(appPath + @"\updated_apc.zip");
@@ -680,17 +682,17 @@ namespace Arduino_Pedelec_Configurator
         private void download_github_sources()
         {
             WebClient webClient = new WebClient();
-
-                tb_console.AppendText("\r\ncleaning up sources");
-                foreach (string directory in System.IO.Directory.EnumerateDirectories(sourcePath_online))
-                {
-                    System.IO.Directory.Delete(directory,true);
-                }
-                System.IO.Directory.CreateDirectory(sourcePath_online);
-                tb_console.AppendText("...done\r\ndownloading sources");
-                try{
-                    System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                    webClient.DownloadFile("https://codeload.github.com/jenkie/Arduino-Pedelec-Controller/legacy.zip/apc" + appVersion, sourcePath_online + @"\git_down.zip");
+            tb_console.AppendText("\r\ncleaning up sources");
+            foreach (string directory in System.IO.Directory.EnumerateDirectories(sourcePath_online))
+            {
+                System.IO.Directory.Delete(directory,true);
+            }
+            System.IO.Directory.CreateDirectory(sourcePath_online);
+            tb_console.AppendText("...done\r\ndownloading sources");
+            try
+            {
+                webClient.Headers.Add("user-agent", "foo");
+                webClient.DownloadFile("https://api.github.com/repos/jenkie/Arduino-Pedelec-Controller/zipball/apc" + appVersion, sourcePath_online + @"\git_down.zip");
             }
             catch (Exception ex)
                 {
